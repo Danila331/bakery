@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="card.css">
+    <title>Card</title>
+</head>
+<body class="body">
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="body__background1">
+            <header class="header">
+                <div class="header__navigation">
+                    <a href="/#section3_2" class="header__link">Обо мне</a>
+                    <a href="/#section2" class="header__link">Мои хиты</a>
+                    <a href="/#section4" class="header__link">Новые вкусы</a>
+                </div>
+                <h1 class="header__logo">
+                    Bakery
+                </h1>
+                <div class="header__navigation">
+                    <a href="/catalog/cakes" class="header__link">Каталог</a>
+                    <a href="/#section5" class="header__link">Заказать</a>
+                    <a href="/#section5" class="header__link">Контакты</a>
+                </div>
+            </header>
+        </div>
+        <div class="body__background1_mobile" style="display: none;">
+            <header class="header">
+                <div class="header__navigation">
+                    <a href="index.html#section3_2" class="header__link">Обо мне</a>
+                    <a href="index.html#section2" class="header__link">Мои хиты</a>
+                    <a href="index.html#section4" class="header__link">Новые вкусы</a>
+                </div>
+                <h1 class="header__logo">
+                    Bakery
+                </h1>
+                <div class="header__navigation">
+                    <a href="#" class="header__link">Каталог</a>
+                    <a href="index.html#section5" class="header__link">Заказать</a>
+                    <a href="index.html#section5" class="header__link">Контакты</a>
+                </div>
+                <div class="menu-container">
+                    <button class="menu-button" id="menu-button" onclick="toggleMenu()"></button>
+                    <button class="menu-button close-button" id="close-button" onclick="toggleMenu()">✕</button>
+                </div> 
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="/#section3_2">Обо мне</a>
+                    <a href="/#section2">Мои хиты</a>
+                    <a href="/#section4">Новые вкусы</a>
+                    <a href="/catalog/cakes">Каталог</a>
+                    <a href="/#section5">Заказать</a>
+                    <a href="/#section5">Контакты</a>
+                </div>
+            </header>
+        </div>
+        <div class="body__background2">
+            <section class="card">
+                <div class="card__navigation">
+                    <a href="#" class="card__link">Главная</a>
+                    <span class="card__linear">/</span>
+                    <a href="#" class="card__link">Каталог</a>
+                    <span class="card__linear">/</span>
+                    <a href="#" class="card__link">Торт 1</a>
+                </div>
+                <div class="card__box">
+                    <img src="./image/index/section2_photo1.jpg" alt="" class="card__image">
+                    <div class="card__text">
+                        <h2 class="card__header">Торт1</h2>
+                        <p class="card__title">Описание</p>
+                        <p class="card__about">Бисквитные морковные коржи с корицей и яблочным пюре, крем-чиз на сливках. Начинка - вишня/карамельный чизкейк.<br><br>
+                            Цена за килограмм не включает в стоимость фигур и других элементов декора. Окончательная цена торта рассчитывается индивидуально.<br><br>
+                            Вес торта лучше рассчитывать исходя из порции 200 гр на человека Заказ должен быть размещен за 2 дня до желаемой даты.</p>
+                        <p class="card__cost">1200 ₽ за 1 кг</p>
+                        <a href="#" class="card__button">Заказать</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="body__background2">
+            <section class="else">
+                <h2 class="else__header">
+                    Вам также может понравится
+                </h2>
+                <div class="else__cards">
+                    <a href="" class="else__card">
+                        <img src="./image/index/section2_photo2.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #1</p>
+                        <p class="else-card__cost">1000 руб</p>
+                    </a>
+                    <a href="" class="else__card">
+                        <img src="./image/index/section2_photo2.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #1</p>
+                        <p class="else-card__cost">1000 руб</p>
+                    </a>
+                    <a href="" class="else__card">
+                        <img src="./image/index/section2_photo3.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #1</p>
+                        <p class="else-card__cost">1000 руб</p>
+                    </a>
+                    <a href="" class="else__card">
+                        <img src="./image/index/section2_photo4.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #1</p>
+                        <p class="else-card__cost">1000 руб</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="body__background5">
+            <footer class="footer">
+                <h1 class="footer__logo">Bakery</h1>
+                <div class="footer__navigation">
+                    <a href="index.html#section2" class="footer__link">Мои хиты</a>
+                    <a href="index.html#section4" class="footer__link">Новые вкусы</a>
+                    <a href="#" class="footer__link">Каталог</a>
+                    <a href="index.html#section5" class="footer__link">Заказать</a>
+                </div>
+            </footer>
+        </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("dropdown-menu");
+                var openButton = document.getElementById("menu-button");
+                var closeButton = document.getElementById("close-button");
+                var header = document.getElementsByClassName("header")[0];
+                if (menu.classList.contains("show")) {
+                  // Закрываем меню
+                    menu.classList.remove("show");
+    
+                    setTimeout(function() {
+                    menu.style.display = "none";
+                  }, 500); // Ждем завершения анимации
+                  // Переключаем видимость кнопок
+                    closeButton.style.display = "none";
+                    openButton.style.display = "inline-block";
+                    header.classList.remove("fixed");
+                } else {
+                  // Открываем меню
+                    menu.style.display = "block";
+    
+                    setTimeout(function() {
+                    menu.classList.add("show");
+                  }, 10); // Небольшая задержка для плавной анимации
+                  // Переключаем видимость кнопок
+                    openButton.style.display = "none";
+                    closeButton.style.display = "inline-block";
+                    header.classList.add("fixed");
+                }
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+                // Как только страница загружена
+                window.addEventListener("load", function() {
+                    let preloader = document.getElementById("preloader");
+                    let content = document.getElementById("content");
+    
+                    // Ждем, пока все полоски завершат свою анимацию
+                    setTimeout(function() {
+                        preloader.classList.add('fade-out'); // Добавляем анимацию исчезновения экрана загрузки
+                        setTimeout(function() {
+                            preloader.style.display = 'none'; // Скрываем preloader после исчезновения
+                            content.classList.add('visible'); // Показываем контент с плавным переходом
+                        }, 500);  // Задержка для завершения анимации исчезновения preloader
+                    }, 1500); // Время завершения анимации полосок загрузки
+                });
+            });
+        </script>
+</body>
+</html>

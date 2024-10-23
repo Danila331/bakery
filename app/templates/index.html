@@ -1,0 +1,318 @@
+{{ define "index" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>Bakery</title>
+</head>
+<body class="body">
+        <div id="preloader">
+            <div class="loader">
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+            </div>
+        </div>
+        <div id="content">
+    <div class="body__background1">
+        <header class="header">
+            <div class="header__navigation">
+                <a href="/#section3_1" class="header__link">Обо мне</a>
+                <a href="/#section2" class="header__link">Мои хиты</a>
+                <a href="/#section4" class="header__link">Новые вкусы</a>
+            </div>
+            <h1 class="header__logo">
+                Bakery
+            </h1>
+            <div class="header__navigation">
+                <a href="/catalog/cakes" class="header__link">Каталог</a>
+                <a href="/#section5" class="header__link">Заказать</a>
+                <a href="/#section5" class="header__link">Контакты</a>
+            </div>
+        </header>
+        <section class="section1">
+            <img src="/static/images/index/section1_photo2.jpg" alt="" class="section1__photo1">
+            <div class="section1__block">
+                <p class="section1__text">
+                    Дессерты<br>
+                    &emsp; <span style='font-family: "Yeseva One", serif;'>ручной работы</span><br>
+                    на вашем столе
+                </p>    
+                <a href="/#section5" class="section1__link">Заказать</a>
+            </div>
+            <img src="/static/images/index/section1_photo1.jpg" alt="" class="section1__photo2">
+        </section>
+    </div>
+    <div class="body__background1_mobile" style="display: none;">
+        <header class="header">
+            <div class="header__navigation">
+                <a href="/#section3_2" class="header__link scroll-link">Обо мне</a>
+                <a href="/#section2" class="header__link scroll-link">Мои хиты</a>
+                <a href="/#section4" class="header__link scroll-link">Новые вкусы</a>
+            </div>
+            <h1 class="header__logo">
+                Bakery
+            </h1>
+            <div class="header__navigation">
+                <a href="/catalog/cakes" class="header__link scroll-link">Каталог</a>
+                <a href="/#section5" class="header__link scroll-link">Заказать</a>
+                <a href="/#section5" class="header__link scroll-link">Контакты</a>
+            </div>
+            <div class="menu-container">
+                <button class="menu-button" id="menu-button" onclick="toggleMenu()"></button>
+                <button class="menu-button close-button" id="close-button" onclick="toggleMenu()">✕</button>
+            </div> 
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="/#section3_2">Обо мне</a>
+                <a href="/#section2">Мои хиты</a>
+                <a href="/#section4">Новые вкусы</a>
+                <a href="/catalog/cakes">Каталог</a>
+                <a href="/#section5">Заказать</a>
+                <a href="/#section5">Контакты</a>
+            </div>
+        </header>
+        <section class="section1_mobile">
+            <p class="section1__text">
+                Дессерты<br>
+                &emsp; <span style='font-family: "Yeseva One", serif;'>ручной работы</span><br>
+                на вашем<br>столе
+            </p>
+            <div class="section1_main-block">
+                <div class="section1__block">
+                    <img src="/static/images/index/section1_photo2.jpg" alt="" class="section1__photo1">    
+                    <a href="/#section5" class="section1__link">Заказать</a>
+                </div>
+                <img src="/static/images/index/section1_photo1.jpg" alt="" class="section1__photo2">    
+            </div>
+            </section>
+    </div>
+    <div class="body__background2" id="section2">
+        <section class="section2">
+            <h2 class="section2__header">
+                Мои хиты
+            </h2>
+            <p class="section2__text">
+                Здесь представлены самые популярные изделия моей кондитерской
+            </p>
+            <div class="section2__cards">
+                <a href="" class="section2__card">
+                    <img src="/static/images/index/section2_photo1.jpg" alt="" class="card__image">
+                    <p class="card__text">Торт #1</p>
+                    <p class="card__cost">1000 руб</p>
+                </a>
+                <a href="" class="section2__card">
+                    <img src="/static/images/index/section2_photo2.jpg" alt="" class="card__image">
+                    <p class="card__text">Торт #1</p>
+                    <p class="card__cost">1000 руб</p>
+                </a>
+                <a href="" class="section2__card">
+                    <img src="/static/images/index/section2_photo3.jpg" alt="" class="card__image">
+                    <p class="card__text">Торт #1</p>
+                    <p class="card__cost">1000 руб</p>
+                </a>
+                <a href="" class="section2__card">
+                    <img src="/static/images/index/section2_photo4.jpg" alt="" class="card__image">
+                    <p class="card__text">Торт #1</p>
+                    <p class="card__cost">1000 руб</p>
+                </a>
+                <a href="" class="section2__card">
+                    <img src="/static/images/index/section2_photo5.jpg" alt="" class="card__image">
+                    <p class="card__text">Торт #1</p>
+                    <p class="card__cost">1000 руб</p>
+                </a>
+            </div>
+            <a href="/catalog/cakes" class="section2__link">В каталог</a>
+        </section>
+    </div>
+    <div class="body__background3" id="section3_1">
+        <section class="section3">
+            <h2 class="section3__header">
+                Немного обо мне
+            </h2>
+            <div class="section3__block">
+                <img src="/static/images/index/section3_photo1.jpg" alt="" class="section3__photo1">
+                <p class="section3__text">
+                    С детства люблю все сладкое,<br>но мама не позволяла мне баловаться<br>им и ограничивала меня.
+                    <br><br><br>Повзрослев, я увлеклась химией и<br>поняла, почему мама была так строга.
+                    <br><br><br>В своих рецептах кондитерских<br>изделий я избегаю не натуральных,<br>тяжелых и зачастую просто вредных<br>компонентов. Я не боюсь<br>фантазировать и самостоятельно<br>корректирую стандартную рецептуру,<br>следуя принципам правильного<br>питания.
+                </p>
+                <div class="section3__photos">
+                    <img src="/static/images/index/section3_photo2.jpg" alt="" class="section3__photo2">
+                    <img src="/static/images/index/section3_photo3.jpg" alt="" class="section3__photo2">
+                    <img src="/static/images/index/section3_photo4.jpg" alt="" class="section3__photo2">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="body__background3_mobile" style="display: none;" id="section3_2">
+        <section class="section3">
+            <h2 class="section3__header">
+                Немного обо мне
+            </h2>
+            <div class="section3__block">
+                <div class="section3__about">
+                    <img src="/static/images/index/section3_photo1.jpg" alt="" class="section3__photo1">
+                    <p class="section3__text">
+                        С детства люблю все сладкое, но мама не позволяла мне баловаться им и ограничивала меня.
+                        <br><br><br>Повзрослев, я увлеклась химией и<br>поняла, почему мама была так строга.
+                    </p>
+                </div>
+                <p class="section3__text">
+                    <br>В своих рецептах кондитерских<br>изделий я избегаю не натуральных,<br>тяжелых и зачастую просто вредных<br>компонентов. Я не боюсь<br>фантазировать и самостоятельно<br>корректирую стандартную рецептуру,<br>следуя принципам правильного<br>питания.
+                </p>
+                <div class="section3__photos">
+                    <img src="/static/images/index/section3_photo2.jpg" alt="" class="section3__photo2">
+                    <img src="/static/images/index/section3_photo3.jpg" alt="" class="section3__photo2">
+                    <img src="/static/images/index/section3_photo4.jpg" alt="" class="section3__photo2">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="body__background4"id="section4">
+        <section class="section4">
+            <h2 class="section4__header">
+                Новые вкусы
+            </h2>
+            <p class="section4__text">
+                Откройте для себя незабываемые вкусы бисквита и начинок
+            </p>
+            <div class="section4__block">
+                <div class="image-container">
+                    <img src="/static/images/index/section4_photo1.jpg" alt="" class="section4__photo">
+                    <div class="overlay">
+                        <div class="text">Вспомните любимый вкус класического бисквита с воздушным кремом</div>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="/static/images/index/section4_photo2.jpg" alt="" class="section4__photo">
+                    <div class="overlay">
+                        <div class="text">Вспомните любимый вкус класического бисквита с воздушным кремом</div>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="/static/images/index/section4_photo3.jpg" alt="" class="section4__photo">
+                    <div class="overlay">
+                        <div class="text">Вспомните любимый вкус класического бисквита с воздушным кремом</div>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="/static/images/index/section4_photo4.jpg" alt="" class="section4__photo">
+                    <div class="overlay">
+                        <div class="text">Вспомните любимый вкус класического бисквита с воздушным кремом</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        <div class="body__background4" style="padding-top: 0px;" id="section5" >
+        <section class="section5" style="margin-top: 0px;">
+            <img src="/static/images/index/section5_photo1.jpg" alt="" class="section5__photo">
+            <div class="section5__block">
+                <h2 class="section5__header">
+                    Закажи свой<br>уникальный дизайн<br>торта
+                </h2>
+                <p class="section5__text">
+                    Просто свяжитесь со мной и<br>расскажите вашу идею - я<br>ее обязательно реализую,<br>учитывая все ваши пожелания.
+                </p>
+                <div class="section5__socials">
+                    <a href="https://wa.me/79263254222" target="_blank" class="section5__social"></a>
+                    <a href="https://t.me/k_ksyushechka" target="_blank" class="section5__social"></a>
+                    <a href="#" target="_blank" class="section5__social"></a>
+                    <a href="https://vk.com/kseniasimonova_7" target="_blank" class="section5__social"></a>
+                </div>
+            </div>
+        </section>
+        </div>
+    <div class="body__background5">
+        <footer class="footer">
+            <h1 class="footer__logo">Bakery</h1>
+            <div class="footer__navigation">
+                <a href="/#section2" class="footer__link">Мои хиты</a>
+                <a href="/#section4" class="footer__link">Новые вкусы</a>
+                <a href="/catalog/cakes" class="footer__link">Каталог</a>
+                <a href="/#section5" class="footer__link">Заказать</a>
+            </div>
+        </footer>
+    </div>
+</div>
+    <script>
+        // Отслеживаем клики по всем элементам с классом 'scroll-link'
+document.querySelectorAll('.scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();  // Отключаем стандартное поведение ссылки
+        
+        // Получаем ID элемента, на который ссылается якорь
+        const targetId = this.getAttribute('href').substring(1);  // Убираем #
+        const targetElement = document.getElementById(targetId);  // Находим элемент с этим ID
+        
+        // Плавная прокрутка к найденному элементу
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',  // Включаем плавную прокрутку
+                block: 'start'  // Прокручиваем до начала элемента
+            });
+        }
+    });
+});
+
+
+        function toggleMenu() {
+            var menu = document.getElementById("dropdown-menu");
+            var openButton = document.getElementById("menu-button");
+            var closeButton = document.getElementById("close-button");
+            var header = document.getElementsByClassName("header")[0];
+            if (menu.classList.contains("show")) {
+              // Закрываем меню
+                menu.classList.remove("show");
+
+                setTimeout(function() {
+                menu.style.display = "none";
+              }, 500); // Ждем завершения анимации
+              // Переключаем видимость кнопок
+                closeButton.style.display = "none";
+                openButton.style.display = "inline-block";
+                header.classList.remove("fixed");
+            } else {
+              // Открываем меню
+                menu.style.display = "block";
+
+                setTimeout(function() {
+                menu.classList.add("show");
+              }, 10); // Небольшая задержка для плавной анимации
+              // Переключаем видимость кнопок
+                openButton.style.display = "none";
+                closeButton.style.display = "inline-block";
+                header.classList.add("fixed");
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Как только страница загружена
+            window.addEventListener("load", function() {
+                let preloader = document.getElementById("preloader");
+                let content = document.getElementById("content");
+
+                // Ждем, пока все полоски завершат свою анимацию
+                setTimeout(function() {
+                    preloader.classList.add('fade-out'); // Добавляем анимацию исчезновения экрана загрузки
+                    setTimeout(function() {
+                        preloader.style.display = 'none'; // Скрываем preloader после исчезновения
+                        content.classList.add('visible'); // Показываем контент с плавным переходом
+                    }, 500);  // Задержка для завершения анимации исчезновения preloader
+                }, 1500); // Время завершения анимации полосок загрузки
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
+{{ end }}
