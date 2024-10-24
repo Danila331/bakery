@@ -1,3 +1,4 @@
+{{ define "card"}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="/static/card.css">
     <title>Card</title>
 </head>
 <body class="body">
@@ -39,17 +40,17 @@
         <div class="body__background1_mobile" style="display: none;">
             <header class="header">
                 <div class="header__navigation">
-                    <a href="index.html#section3_2" class="header__link">Обо мне</a>
-                    <a href="index.html#section2" class="header__link">Мои хиты</a>
-                    <a href="index.html#section4" class="header__link">Новые вкусы</a>
+                    <a href="/#section3_2" class="header__link">Обо мне</a>
+                    <a href="/#section2" class="header__link">Мои хиты</a>
+                    <a href="/#section4" class="header__link">Новые вкусы</a>
                 </div>
                 <h1 class="header__logo">
                     Bakery
                 </h1>
                 <div class="header__navigation">
-                    <a href="#" class="header__link">Каталог</a>
-                    <a href="index.html#section5" class="header__link">Заказать</a>
-                    <a href="index.html#section5" class="header__link">Контакты</a>
+                    <a href="/catalog/cakes" class="header__link">Каталог</a>
+                    <a href="/#section5" class="header__link">Заказать</a>
+                    <a href="/#section5" class="header__link">Контакты</a>
                 </div>
                 <div class="menu-container">
                     <button class="menu-button" id="menu-button" onclick="toggleMenu()"></button>
@@ -68,22 +69,22 @@
         <div class="body__background2">
             <section class="card">
                 <div class="card__navigation">
-                    <a href="#" class="card__link">Главная</a>
+                    <a href="/" class="card__link">Главная</a>
                     <span class="card__linear">/</span>
-                    <a href="#" class="card__link">Каталог</a>
+                    <a href="/catalog/cakes" class="card__link">Каталог</a>
                     <span class="card__linear">/</span>
-                    <a href="#" class="card__link">Торт 1</a>
+                    <a href="/catalog/cakes/?id={{ .Id }}" class="card__link">{{ .Name }}</a>
                 </div>
                 <div class="card__box">
-                    <img src="./image/index/section2_photo1.jpg" alt="" class="card__image">
+                    <img src="{{ .Img }}" alt="" class="card__image">
                     <div class="card__text">
-                        <h2 class="card__header">Торт1</h2>
+                        <h2 class="card__header">{{ .Name }}</h2>
                         <p class="card__title">Описание</p>
                         <p class="card__about">Бисквитные морковные коржи с корицей и яблочным пюре, крем-чиз на сливках. Начинка - вишня/карамельный чизкейк.<br><br>
                             Цена за килограмм не включает в стоимость фигур и других элементов декора. Окончательная цена торта рассчитывается индивидуально.<br><br>
                             Вес торта лучше рассчитывать исходя из порции 200 гр на человека Заказ должен быть размещен за 2 дня до желаемой даты.</p>
-                        <p class="card__cost">1200 ₽ за 1 кг</p>
-                        <a href="#" class="card__button">Заказать</a>
+                        <p class="card__cost">{{ .Cost }}</p>
+                        <a href="/#section5" class="card__button">Заказать</a>
                     </div>
                 </div>
             </section>
@@ -94,25 +95,25 @@
                     Вам также может понравится
                 </h2>
                 <div class="else__cards">
-                    <a href="" class="else__card">
-                        <img src="./image/index/section2_photo2.jpg" alt="" class="else-card__image">
+                    <a href="/catalog/cakes/?id=1" class="else__card">
+                        <img src="/static/images/cakes/cake5.jpg" alt="" class="else-card__image">
                         <p class="else-card__text">Торт #1</p>
-                        <p class="else-card__cost">1000 руб</p>
+                        <p class="else-card__cost">2500 руб за 1 кг</p>
                     </a>
-                    <a href="" class="else__card">
-                        <img src="./image/index/section2_photo2.jpg" alt="" class="else-card__image">
-                        <p class="else-card__text">Торт #1</p>
-                        <p class="else-card__cost">1000 руб</p>
+                    <a href="/catalog/cakes/?id=2" class="else__card">
+                        <img src="/static/images/cakes/cake2.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #2</p>
+                        <p class="else-card__cost">2500 руб за 1 кг</p>
                     </a>
-                    <a href="" class="else__card">
-                        <img src="./image/index/section2_photo3.jpg" alt="" class="else-card__image">
-                        <p class="else-card__text">Торт #1</p>
-                        <p class="else-card__cost">1000 руб</p>
+                    <a href="/catalog/cakes/?id=3" class="else__card">
+                        <img src="/static/images/cakes/cake3.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #3</p>
+                        <p class="else-card__cost">2500 руб за 1 кг</p>
                     </a>
-                    <a href="" class="else__card">
-                        <img src="./image/index/section2_photo4.jpg" alt="" class="else-card__image">
-                        <p class="else-card__text">Торт #1</p>
-                        <p class="else-card__cost">1000 руб</p>
+                    <a href="/catalog/cakes/?id=4" class="else__card">
+                        <img src="/static/images/cakes/cake4.jpg" alt="" class="else-card__image">
+                        <p class="else-card__text">Торт #4</p>
+                        <p class="else-card__cost">2500 руб за 1 кг</p>
                     </a>
                 </div>
             </section>
@@ -121,10 +122,10 @@
             <footer class="footer">
                 <h1 class="footer__logo">Bakery</h1>
                 <div class="footer__navigation">
-                    <a href="index.html#section2" class="footer__link">Мои хиты</a>
-                    <a href="index.html#section4" class="footer__link">Новые вкусы</a>
-                    <a href="#" class="footer__link">Каталог</a>
-                    <a href="index.html#section5" class="footer__link">Заказать</a>
+                    <a href="/#section2" class="footer__link">Мои хиты</a>
+                    <a href="/#section4" class="footer__link">Новые вкусы</a>
+                    <a href="/catalog/cakes" class="footer__link">Каталог</a>
+                    <a href="/#section5" class="footer__link">Заказать</a>
                 </div>
             </footer>
         </div>
@@ -178,3 +179,4 @@
         </script>
 </body>
 </html>
+{{ end }}

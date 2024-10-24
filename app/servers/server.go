@@ -15,8 +15,10 @@ func StartServer() error {
 
 	e.GET("/", controllers.MainPageController)
 	catalog := e.Group("/catalog")
-	catalog.GET("/cakes", controllers.CatalogCakePageController)
-	catalog.GET("/cookies", controllers.CatalogCookiePageController)
+	catalog.GET("/cakes", controllers.CatalogCakesPageController)
+	catalog.GET("/cookies", controllers.CatalogCookiesPageController)
+	catalog.GET("/cakes/", controllers.CatalogCakePageController)
+	catalog.GET("/cookies/", controllers.CatalogCookiePageController)
 	e.Logger.Fatal(e.Start(":8080"))
 	return nil
 }

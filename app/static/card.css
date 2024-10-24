@@ -248,7 +248,7 @@ html {
     height: 34px;
     border: none;
     cursor: pointer;
-    background-image: url(./image/icons/menu.png);
+    background-image: url(/static/images/icons/menu.png);
     background-position: bottom;
     background-size: contain;
     background-color: transparent;
