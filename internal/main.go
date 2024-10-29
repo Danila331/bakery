@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Danila331/bakery/app/servers"
+	"github.com/Danila331/bakery/internal/servers"
 )
 
 func main() {

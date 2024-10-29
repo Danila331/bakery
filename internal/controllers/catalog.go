@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"text/template"
 
-	"github.com/Danila331/bakery/app/models"
+	"github.com/Danila331/bakery/internal/models"
 	"github.com/labstack/echo/v4"
 )
 

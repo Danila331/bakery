@@ -1,7 +1,7 @@
 package servers
 
 import (
-	"github.com/Danila331/bakery/app/controllers"
+	"github.com/Danila331/bakery/internal/controllers"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
@@ -19,6 +19,6 @@ func StartServer() error {
 	catalog.GET("/cookies", controllers.CatalogCookiesPageController)
 	catalog.GET("/cakes/", controllers.CatalogCakePageController)
 	catalog.GET("/cookies/", controllers.CatalogCookiePageController)
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start(":80"))
 	return nil
 }
